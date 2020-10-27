@@ -1,10 +1,16 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+const cors = require("cors");
+
+app.use(cors());
+
 
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
+//esse comando serve para evitar que quere a api quando requisitado. (já utilizado) 
+//npm install cors --save
 
 // Fake Database
 var DB = {
