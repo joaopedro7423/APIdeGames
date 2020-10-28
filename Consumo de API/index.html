@@ -8,7 +8,7 @@
     <h4>Login</h4>
     <input type="text" name="email" id="email" placeholder="E-mail">
     <input type="password" name="password" id="password" placeholder="********">
-    <button type="button" onclick="loginT()">Entrar</button>
+    <button type="button" onclick="login">Entrar</button>
     <hr>
     <h4>Lista de Games</h4>
     <ul id="games"></ul>
@@ -41,7 +41,7 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
 
-    function loginT(){
+    function login(){
         var emailField = document.getElementById("email");
         var passwordField = document.getElementById("password");
   
@@ -60,7 +60,7 @@
 
     var axiosConfig = {
         headers:{
-            Authorization: "Bearer"+"sakdmaskmdkasdlasdkm";
+            Authorization: "Bearer"+"sakdmaskmdkasdlasdkm"
         }
     }
   
