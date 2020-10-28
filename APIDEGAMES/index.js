@@ -93,8 +93,9 @@ var DB = {
 app.get("/games",auth,(req,res)=>{
 
     res.statusCode = 200;
-    res.json({empresa: req.empresa,user: req.loggerUser, games: DB.games});
+    res.json( DB.games);
 });
+
 //busca os dados individualmente pelo id
 app.get("/game/:id",auth,(req,res)=>{
 
@@ -151,7 +152,7 @@ app.delete("/game/:id",auth,(req,res)=>{
 });
 
 // alterar 
-app.put("/game/:id",(req,res)=>{
+app.put("/game/:id",auth,(req,res)=>{
 
     if(isNaN(req.params.id)){
         res.sendStatus(400);
